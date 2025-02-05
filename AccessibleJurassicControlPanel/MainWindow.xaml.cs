@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using AccessibleJurassicControlPanel.Pages;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -18,19 +19,39 @@ using Windows.Foundation.Collections;
 
 namespace AccessibleJurassicControlPanel
 {
+    public class NavigationItem
+    {
+        public string Label { get; set; } = "";
+        public Symbol Symbol { get; set; } = Symbol.Home;
+        public Type PageType { get; set; } = typeof(Page);
+        public bool IsSelected { get; set; } = false;
+    }
+
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public List<NavigationItem> NavigationItems { get; set; } = new List<NavigationItem>
+        {
+            new NavigationItem { Label = "Home", Symbol = Symbol.Home, PageType = typeof(Home), IsSelected = true, },
+            new NavigationItem { Label = "Chapter 1: Simple Name", Symbol = Symbol.Bullets, PageType = typeof(Ch1SimpleName) },
+        };
+
         public MainWindow()
         {
             this.InitializeComponent();
+
+            ContentFrame.Navigate(typeof(Home));
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            myButton.Content = "Clicked";
+            var selectedItem = args.SelectedItem as NavigationItem;
+            if (selectedItem != null)
+            {
+                ContentFrame.Navigate(selectedItem.PageType);
+            }
         }
     }
 }
