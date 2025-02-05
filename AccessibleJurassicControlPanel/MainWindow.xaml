@@ -13,7 +13,8 @@
         VerticalAlignment="Stretch"
         HorizontalAlignment="Stretch"
         SelectionChanged="NavigationView_SelectionChanged"
-        MenuItemsSource="{x:Bind NavigationItems}">
+        MenuItemsSource="{x:Bind NavigationItems}"
+        IsSettingsVisible="False">
         <NavigationView.MenuItemTemplate>
             <DataTemplate
                 x:DataType="local:NavigationItem">

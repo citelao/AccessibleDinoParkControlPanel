@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="AccessibleJurassicControlPanel.Pages.Ch2AdvancedInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AccessibleJurassicControlPanel.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="16,8" Spacing="4"
+            AutomationProperties.Name="DinoPark Emergency Alert System">
+        <TextBlock
+            Style="{ThemeResource TitleTextBlockStyle}"
+            Margin="0,0,0,8"
+            AutomationProperties.HeadingLevel="Level1">DinoPark Emergency Alert System</TextBlock>
+
+        <InfoBar IsOpen="True"
+                 Severity="Error"
+                 Title="Error"
+                 IsClosable="False"
+                 Message="Radio towers have been destroyed by raptors." />
+
+        <!--
+            Wow! Lots of helpful accessible properties!
+
+            Except the most important one, ItemStatus, will not be read by
+            default in Narrator. It's advanced information.
+
+            It's not read at all in NVDA.
+        -->
+        <ToggleButton
+            AutomationProperties.FullDescription="Will have no effect if radio towers have been destroyed by raptors"
+            AutomationProperties.ItemStatus="Radio towers have been destroyed by raptors"
+            ToolTipService.ToolTip="Send a general alert via radio to all security personel"
+            AutomationProperties.HelpText="Send a general alert via radio to all security personel">
+            Activate red alert
+        </ToggleButton>
+        <TextBlock Style="{ThemeResource CaptionTextBlockStyle}">Will have no effect if radio towers have been destroyed by raptors.</TextBlock>
+    </StackPanel>
+</Page>

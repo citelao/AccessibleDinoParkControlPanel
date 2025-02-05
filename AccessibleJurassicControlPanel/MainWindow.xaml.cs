@@ -36,6 +36,8 @@ namespace AccessibleJurassicControlPanel
         {
             new NavigationItem { Label = "Home", Symbol = Symbol.Home, PageType = typeof(Home), IsSelected = true, },
             new NavigationItem { Label = "Chapter 1: Simple Name", Symbol = Symbol.Bullets, PageType = typeof(Ch1SimpleName) },
+            new NavigationItem { Label = "Chapter 2: Advanced Info", Symbol = Symbol.Bullets, PageType = typeof(Ch2AdvancedInfo) },
+            new NavigationItem { Label = "Chapter 3: Contexts", Symbol = Symbol.Bullets, PageType = typeof(Ch3Context) },
         };
 
         public MainWindow()

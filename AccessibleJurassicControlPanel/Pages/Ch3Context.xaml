@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="AccessibleJurassicControlPanel.Pages.Ch3Context"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AccessibleJurassicControlPanel.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="16,8" Spacing="4"
+        AutomationProperties.Name="DinoPark Escape Tunnels">
+        <TextBlock
+            Style="{ThemeResource TitleTextBlockStyle}"
+            Margin="0,0,0,8"
+            AutomationProperties.HeadingLevel="Level1">DinoPark Escape Tunnels</TextBlock>
+
+        <StackPanel
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1"
+            Padding="8"
+            Spacing="4"
+            CornerRadius="8"
+            AutomationProperties.Name="Tunnel to raptors">
+            <TextBlock Text="Tunnel to raptors"
+                       AutomationProperties.HeadingLevel="Level1"
+                       Style="{ThemeResource BodyStrongTextBlockStyle}" />
+            <ToggleButton>Open</ToggleButton>
+        </StackPanel>
+
+        <StackPanel
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1"
+            Padding="8"
+            Spacing="4"
+            CornerRadius="8"
+            AutomationProperties.Name="Tunnel to helipad">
+            <TextBlock Text="Tunnel to helipad"
+                       AutomationProperties.HeadingLevel="Level1"
+                       Style="{ThemeResource BodyStrongTextBlockStyle}" />
+            <ToggleButton>Open</ToggleButton>
+        </StackPanel>
+
+        <StackPanel
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1"
+            Padding="8"
+            Spacing="4"
+            CornerRadius="8"
+            AutomationProperties.Name="Tunnel to hotel">
+            <TextBlock Text="Tunnel to hotel"
+                       AutomationProperties.HeadingLevel="Level1"
+                       Style="{ThemeResource BodyStrongTextBlockStyle}" />
+            <ToggleButton>Seal permanently</ToggleButton>
+            <ToggleButton>Open</ToggleButton>
+        </StackPanel>
+
+        <StackPanel
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1"
+            Padding="8"
+            Spacing="4"
+            CornerRadius="8"
+            AutomationProperties.Name="Tunnel to EVEN SCARIER raptors">
+            <TextBlock Text="Tunnel to EVEN SCARIER raptors"
+                       AutomationProperties.HeadingLevel="Level1"
+                       Style="{ThemeResource BodyStrongTextBlockStyle}" />
+            <ToggleButton>Seal permanently</ToggleButton>
+            <ToggleButton>Open</ToggleButton>
+        </StackPanel>
+    </StackPanel>
+</Page>

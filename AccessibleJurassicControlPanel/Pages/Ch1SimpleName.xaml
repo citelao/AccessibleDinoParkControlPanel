@@ -9,9 +9,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel>
-        <TextBlock Style="{ThemeResource TitleTextBlockStyle}">DinoPark Gate Control</TextBlock>
+    <StackPanel Padding="16,8" Spacing="4"
+                AutomationProperties.Name="DinoPark Gate Control">
+        <TextBlock
+            Style="{ThemeResource TitleTextBlockStyle}"
+            Margin="0,0,0,8"
+            AutomationProperties.HeadingLevel="Level1">DinoPark Gate Control</TextBlock>
 
-        <Button>Open all gates</Button>
+        <Button AutomationProperties.FullDescription="This may take some time">Close all gates</Button>
+        <TextBlock Style="{ThemeResource CaptionTextBlockStyle}">This may take some time.</TextBlock>
     </StackPanel>
 </Page>
