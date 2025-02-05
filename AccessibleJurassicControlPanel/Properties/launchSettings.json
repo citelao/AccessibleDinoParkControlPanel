@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AccessibleJurassicControlPanel (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AccessibleJurassicControlPanel (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
